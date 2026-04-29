@@ -6,6 +6,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 void printBytes(const unsigned char *bytes, size_t size, const char* type_name) {
     printf("%s %p: ", type_name, (void *) bytes);
@@ -51,6 +52,10 @@ int main() {
 
     int *p_val = &i_val;
     printBytes((unsigned char*) &p_val, sizeof(p_val), "pointer");
+
+    printf("\n");
+    const char *s_val = "Hello, World.";
+    printStringBytes((const unsigned char*) s_val);
 
     printf("\n");
 
