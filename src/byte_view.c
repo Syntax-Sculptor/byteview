@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void printBytes(unsigned char *bytes, size_t size, char* type_name) {
+void printBytes(const unsigned char *bytes, size_t size, char* type_name) {
     printf("%s %p: ", type_name, (void *) bytes);
 
     for (size_t i = 0; i < size; i++) {
