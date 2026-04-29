@@ -17,6 +17,13 @@ void printBytes(unsigned char *bytes, size_t size, char* type_name) {
     printf("\n");
 }
 
+int isMachineLittleEndian() {
+    int test_val = 0x1234;
+    int first_byte = ((unsigned char *) &test_val)[0];
+ 
+    return first_byte == 0x34;
+}
+
 int main() {
     printf("ByteView - C object sizes\n\n");
 
@@ -38,4 +45,12 @@ int main() {
 
     int *p_val = &i_val;
     printBytes((unsigned char*) &p_val, sizeof(p_val), "pointer");
+
+    printf("\n");
+
+    if (isMachineLittleEndian()) {
+        printf("Detected endian: little endian");
+    } else {
+        printf("Detected endian: big endian");
+    }
 }
