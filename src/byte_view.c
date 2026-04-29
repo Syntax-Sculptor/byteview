@@ -49,8 +49,10 @@ int main() {
     printf("\n");
 
     if (isMachineLittleEndian()) {
-        printf("Detected endian: little endian");
+        printf("Detected endian: little endian.\n");
     } else {
-        printf("Detected endian: big endian");
+        printf("Detected endian: big endian\n");
     }
+
+    return EXIT_SUCCESS;
 }
