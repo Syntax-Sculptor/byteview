@@ -43,6 +43,12 @@ int main() {
     float f_val = 1.5f;
     printBytes((unsigned char *) &f_val, sizeof(f_val), "float");
 
+    long l_val = 0x12345678;
+    printBytes((unsigned char*) &l_val, sizeof(l_val), "long");
+
+    double d_val = 5.5;
+    printBytes((unsigned char*) &d_val, sizeof(d_val), "double");
+
     int *p_val = &i_val;
     printBytes((unsigned char*) &p_val, sizeof(p_val), "pointer");
 
