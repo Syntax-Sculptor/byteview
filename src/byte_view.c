@@ -25,6 +25,25 @@ int isMachineLittleEndian() {
     return first_byte == 0x34;
 }
 
+void printStringBytes(const unsigned char* bytes) {
+    printf("Bytes for string %s\n", bytes);
+    printf("No null terminator:\n");
+    printf("%p: ", (void *) bytes);
+
+    for (size_t i = 0; i < strlen((const char*)bytes); i++) {
+        printf("%02x ", bytes[i]);
+    }
+
+    printf("\nWith null terminator:\n");
+    printf("%p: ", (void *) bytes);
+
+    for (size_t i = 0; i < strlen((const char*)bytes) + 1; i++) {
+        printf("%02x ", bytes[i]);
+    }
+
+    printf("\n");
+}
+
 int main() {
     printf("ByteView - C object sizes\n\n");
 
