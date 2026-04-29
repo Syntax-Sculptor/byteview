@@ -47,6 +47,8 @@ void printStringBytes(const unsigned char* bytes) {
 int main() {
     printf("ByteView - C object sizes\n\n");
 
+    // Byte Size Demo
+
     printf("char:   %lld bytes\n", sizeof(char));
     printf("short:  %lld bytes\n", sizeof(short));
     printf("int:    %lld bytes\n", sizeof(int));
@@ -54,6 +56,8 @@ int main() {
     printf("double: %lld bytes\n", sizeof(double));
     printf("long:   %lld bytes\n", sizeof(long));
     printf("void*:  %lld bytes\n", sizeof(void*));
+
+    // Byte Representation demo
 
     printf("\nByte representation\n\n");
 
@@ -84,5 +88,16 @@ int main() {
         printf("Detected endian: big endian\n");
     }
 
+    // Bitwise Demo
+    printf("\nBit operations demo\n");
+    
+    int x = 0x67;
+    int y = 0x42;
+
+    printf("%02x & %02x = %02x\n", x, y, x & y);
+    printf("%02x | %02x = %02x\n", x, y, x | y);
+    printf("%02x ^ %02x = %02x\n", x, y, x ^ y);
+    printf("~%02x       = %02x\n", x, ~x & 0xff);
+    printf("~%02x       = %02x\n", y, ~y & 0xff);
     return EXIT_SUCCESS;
 }
