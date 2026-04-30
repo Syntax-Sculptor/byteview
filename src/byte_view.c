@@ -91,13 +91,22 @@ int main() {
     // Bitwise Demo
     printf("\nBit operations demo\n");
     
-    int x = 0x67;
-    int y = 0x42;
+    unsigned int x = 0x67;
+    unsigned int y = 0x42;
 
-    printf("%02x & %02x = %02x\n", x, y, x & y);
-    printf("%02x | %02x = %02x\n", x, y, x | y);
-    printf("%02x ^ %02x = %02x\n", x, y, x ^ y);
-    printf("~%02x       = %02x\n", x, ~x & 0xff);
-    printf("~%02x       = %02x\n", y, ~y & 0xff);
+    printf("%02x & %02x = %02u\n", x, y, x & y);
+    printf("%02x | %02x = %02u\n", x, y, x | y);
+    printf("%02x ^ %02x = %02u\n", x, y, x ^ y);
+    printf("~%02x       = %02u\n", x, ~x & 0xff);
+    printf("~%02x       = %02u\n", y, ~y & 0xff);
+
+    // Shift demo
+    printf("\nShift operations demo\n");
+
+    printf("%u << 1 = %02x\n", x, x << 1);
+    printf("%u << 2 = %02x\n", x, x << 2);
+    printf("%u >> 1 = %02x\n", x, x >> 1);
+    printf("%u >> 2 = %02x\n", x, x >> 2);
+
     return EXIT_SUCCESS;
 }
