@@ -103,10 +103,10 @@ int main() {
     // Shift demo
     printf("\nShift operations demo\n");
 
-    printf("%u << 1 = %02x\n", x, x << 1);
-    printf("%u << 2 = %02x\n", x, x << 2);
-    printf("%u >> 1 = %02x\n", x, x >> 1);
-    printf("%u >> 2 = %02x\n", x, x >> 2);
+    printf("%u << 1 = %02u\n", x, x << 1);
+    printf("%u << 2 = %02u\n", x, x << 2);
+    printf("%u >> 1 = %02u\n", x, x >> 1);
+    printf("%u >> 2 = %02u\n", x, x >> 2);
 
     return EXIT_SUCCESS;
 }
